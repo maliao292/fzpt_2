@@ -1,0 +1,204 @@
+/** 初始化 **/
+*{
+	box-sizing: border-box;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td,
+form,
+pre {
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+a:active,
+a:hover {
+	outline: 0
+}
+
+img {
+	display: inline-block;
+	border: none;
+	vertical-align: middle;
+}
+
+li {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1,
+h2,
+h3 {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: 400;
+}
+
+button,
+input,
+select,
+textarea {
+	font-size: 100%;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	outline: 0;
+}
+
+pre {
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+}
+
+/* 头部 */
+.content_fzpt{
+	width: 1680px;
+	height: 1050px;
+	background: #EBEFF2;
+	margin: 0 auto;
+	border: 1px solid #333;
+}
+
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 53px;
+	padding: 0 20px;
+    background-color: white;
+    min-width: 800px;
+    box-shadow: 0 0 38px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+header .leftname_s{
+	font-size: 20px;
+    font-weight: 600;
+    color: #374750;
+    line-height: 53px;
+    
+}
+header .headtab_s span{
+	display: inline-block;
+	height: 53px;
+	line-height: 53px;
+    vertical-align: middle;
+    font-size: 18px;
+    color: #607c8b;
+    font-weight: 500;
+    margin-right: 30px;	
+}
+header .headtab_s span.active{
+	color: #158fe7;
+	border-bottom: 2px solid #158FE7;
+}
+
+[class$='_c']{
+	cursor: pointer;
+}
+header .user .userface_s{
+	display: inline-block;
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	border: 2px solid #158FE7;
+	overflow: hidden;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+header .user .userface_s img{
+	width: 30px;
+}
+header .user .username_s{
+	color: #333333;
+	font-weight: 700;
+	font-size: 14px;
+	vertical-align: middle;
+}
+#iframe_content{
+	height: 970px;
+}
+
+.toindex_s span{
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 50%;
+	background: #0082FD;
+	font-size: 16px;
+	color: #fff;
+	width: 30px;
+	text-align: center;
+	
+}
+
+.sel_sp{
+	height: 50px;
+	background: #fff;
+	border: 1px solid #E0E4E7;
+	border-radius: 5px;
+	padding: 0 15px;
+	color: #666;
+}
+
+.btnall_s{
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-radius:5px;
+	color: #FFF;
+	font-size: 14px;
+	padding: 0 30px;
+}
+
+.btn_sb{
+	background: #0080FF;
+}
+.btn_qb{
+	background: #009CFF;
+}
+.btn_sg{
+	background: #3CDF9C;
+}

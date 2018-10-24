@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css"/>
+		<title>能源互联网运行仿真平台</title>
+	</head>
+
+	<body>
+		<div class="content_fzpt">
+			<header>
+				<div class="leftname_s">
+					<img src="" alt="" />
+					<span>能源互联网运行仿真平台</span>
+				</div>
+				<div class="headtab_s headtab_c">
+					<span class="active">电-气互联系统</span>
+					<span>电-热互联系统</span>
+				</div>
+				<div class="currenttime"></div>
+				<div class="user">
+					<span class="userface_s"><img src="img/face.jpg"/></span>
+					<span class="username_s">你好，MAOZY</span>
+				</div>
+				<div class="toindex_c toindex_s"><span class="layui-icon layui-icon-home"></span></div>
+			</header>
+			<div id="iframe_content">
+				<iframe  src="ele-gas.html" scrolling="no"frameborder="0" width="100%" height="100%"></iframe>
+			</div>
+		</div>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				// 首页 tab 切换
+				$('.headtab_c span').on('click', function() {
+					$(this).addClass('active').siblings().removeClass('active')
+				})
+				/* 获取当前时间*/
+				function realSysTime() {
+					var now = new Date(); //创建Date对象 
+					var year = now.getFullYear(); //获取年份 
+					var month = now.getMonth(); //获取月份 
+					var date = now.getDate(); //获取日期 
+					var day = now.getDay(); //获取星期 
+					var hour = now.getHours(); //获取小时 
+					var minu = now.getMinutes(); //获取分钟 
+					var sec = now.getSeconds(); //获取秒钟 
+					if(sec < 10) {
+						sec = '' + 0 + sec;
+					}
+					month = month + 1;
+					var time = year + "年" + month + "月" + date + "日 " + " " + hour + "点" +
+						minu + "分" + sec + "秒"; //组合系统时间 
+					return time; //显示系统时间 
+				}
+				setInterval(function(){$('.currenttime').html(realSysTime())},1000);
+				
+				/*end*/
+			})
+		</script>
+	</body>
+
+</html>

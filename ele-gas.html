@@ -32,7 +32,7 @@
 				<div class="left_btn">
 					<span class="btnall_s btn_sb">确认</span>
 					<span class="btnall_s btn_qb">系统案例描述</span>
-					<span class="btnall_s btn_sg">规划方案计算</span>
+					<span class="btnall_s btn_sg to_c" title="planning.html">规划方案计算</span>
 				</div>
 			</div>
 			<!-- 左中右 三部分 -->
@@ -643,6 +643,12 @@
 
 				$('.drawbtn_c span').on("click", function() {
 					$(this).toggleClass('active')
+				})
+				
+				$('.to_c').on('click',function(){
+					var href = $(this).attr('title');
+					
+					parent.$('#iframe_content iframe').attr('src',href);
 				})
 
 				function linel() { //电力负荷预测曲线

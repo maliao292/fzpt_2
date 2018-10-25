@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/iframe.css" />
+		<title></title>
+	</head>
+
+	<body>
+		<div class="contentall_s">
+			<!-- 左中右 三部分 -->
+			<div class="msgshow plan_s">
+				<!-- 左-->
+				<div class="left_s">
+					<div class="countname_d resu_s">
+						<h2>规划结果</h2>
+						<div class="list">
+							<div>
+								<p>电网节点个数</p>
+								<span>670</span>
+							</div>
+							<div>
+								<p>煤电机组台数</p>
+								<span>85</span>
+							</div>
+							<div>
+								<p>气电机组台数</p>
+								<span>20</span>
+							</div>
+							<div>
+								<p>输电线路条数</p>
+								<span>897</span>
+							</div>
+						</div>
+					</div>
+					<div class="countshow_s plancountshow_s">
+						<div class="plan_year">1年</div>
+						<ul>
+							<li>
+								<img src="img/p1.png" />
+								<div>燃煤机组建设</div>
+								<span>1,2,6,10,21</span>
+							</li>
+							<li>
+								<img src="img/p2.png" />
+								<div>燃气机组建设</div>
+								<span>1,2,6,10,21</span>
+							</li>
+							<li>
+								<img src="img/p3.png" />
+								<div>风电场建设</div>
+								<span>1,2,6,10,21</span>
+							</li>
+							<li>
+								<img src="img/p4.png" />
+								<div>P2G建设</div>
+								<span>1,2,6,10,21</span>
+							</li>
+							<li>
+								<img src="img/p5.png" />
+								<div>储气罐建设</div>
+								<span>1,2,6,10,21</span>
+							</li>
+						</ul>
+					</div>
+					<div class="countshow_s plancountshow_s">
+						<div class="plan_year">2年</div>
+						<ul>
+							<li>
+								<img src="img/p1.png" />
+								<div>燃煤机组建设</div>
+								<span>1,2,6,10,21</span>
+							</li>
+							<li>
+								<img src="img/p2.png" />
+								<div>燃气机组建设</div>
+								<span>1,2,6,10,21</span>
+							</li>
+							<li>
+								<img src="img/p3.png" />
+								<div>风电场建设</div>
+								<span>1,2,6,10,21</span>
+							</li>
+							<li>
+								<img src="img/p4.png" />
+								<div>P2G建设</div>
+								<span>1,2,6,10,21</span>
+							</li>
+							<li>
+								<img src="img/p5.png" />
+								<div>储气罐建设</div>
+								<span>1,2,6,10,21</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--中-->
+				<div class="center_s">
+					<div class="draw plandraw_s">
+						<div class="drawbtn drawbtn_c">
+							<span class="active">电力系统拓扑</span>
+							<span>天然气系统拓扑</span>
+							<span>电-气耦合系统拓扑</span>
+						</div>
+
+						<!-- 拓扑图 -->
+						<div class="piccontent"></div>
+					</div>
+				</div>
+				<!--右-->
+				<div class="right_s planrig_s">
+					<div class="plantab_s plantab_c">
+						<span class="active">线路</span>
+						<span>输气管道</span>
+						<span>压缩机</span>
+						<span>节点气压</span>
+					</div>
+					<select name="" class="plansel_s">
+						<option value="">规划年</option>
+					</select>
+					<select name="" class="plansel_s">
+						<option value="">负荷水平</option>
+					</select>
+					<div class="lineshow_s">
+						<div class="gas_line">
+							<div id="l1" style="height: 200px;width: 470px;"></div>
+							<div class="sel_s">
+								<select name="">
+									<option value="">1#</option>
+								</select>
+							</div>
+						</div>
+						<div class="gas_line">
+							<div id="l2" style="height: 200px;width: 470px;"></div>
+							<div class="sel_s">
+								<select name="">
+									<option value="">1#</option>
+								</select>
+							</div>
+						</div>
+						<div class="gas_line">
+							<div id="l3" style="height: 200px;width: 470px;"></div>
+							<div class="sel_s">
+								<select name="">
+									<option value="">1#</option>
+								</select>
+							</div>
+						</div>
+						<div class="gas_line">
+							<div id="l4" style="height: 200px;width: 470px;"></div>
+							<div class="sel_s">
+								<select name="">
+									<option value="">1#</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.dn_btn .tabrad_s').on('click', function() {
+					$(this).addClass('active').siblings().removeClass('active')
+				})
+				$('.plantab_s span').on('click', function() {
+					$(this).addClass('active').siblings().removeClass('active')
+				})
+
+				$('.drawbtn_c span').on("click", function() {
+					$(this).toggleClass('active')
+				})
+
+				function linel(title, id) { //电力负荷预测曲线
+					var xdata = [];
+					var ydata = [];
+					var myChart = echarts.init(document.getElementById(id));
+					option = {
+						title: {
+							text: title,
+							left: 'center',
+							textStyle: {
+								//文字颜色
+								color: '#666',
+								//字体风格,'normal','italic','oblique'
+								fontSize: 16
+							}
+						},
+						tooltip: {},
+						xAxis: [{
+							type: 'category',
+							data:[1, 2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],
+							/*	axisPointer: {
+									type: 'shadow'
+								},*/
+							axisLabel: {
+								show: true,
+								interval: 0,
+								rotate: 70,
+								textStyle: {
+									color: '#A3A3A3',
+									fontSize: '14'
+								}
+							},
+							axisTick: {
+								show: false,
+							},
+							axisLine: {
+								show: true,
+								lineStyle: {
+									color: '#A3A3A3',
+								}
+							},
+							splitLine: {
+								show: true,
+							}
+						}, ],
+						yAxis: [{
+							name: '单位(MW)',
+							type: 'value',
+							axisLabel: {
+								textStyle: {
+									color: '#A3A3A3',
+									fontSize: '14'
+								}
+							},
+							axisLine: {
+								show: true,
+								lineStyle: {
+									color: '#A3A3A3',
+								}
+							},
+							splitLine: {
+								show: true,
+							}
+						}],
+						series: [{
+							type: 'bar',
+							symbol: 'circle', //设定为实心点
+							symbolSize: 5, //设定实心点的大小
+							itemStyle: {
+								normal: {
+									color: '#448aff'
+								}
+							},
+
+							data:  [1, 2, 3,58,6,456,5,98,6,5,2,56,95,2,33,65,698,2123,899,62,47,532,68,62]
+						}],
+						grid: {
+							width: '85%',
+							left: '10%',
+							height: '50%',
+							x: 60,
+							x2: 0
+						}
+					};
+					myChart.setOption(option);
+				}
+				linel('燃煤/燃气机组出力', 'l1');
+				linel('风电出力', 'l2');
+				linel('气源/P2G产气量', 'l3');
+				linel('储蓄罐储气', 'l4');
+				/*end*/
+			})
+		</script>
+	</body>
+
+</html>

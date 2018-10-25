@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/iframe.css" />
+		<title></title>
+	</head>
+
+	<body>
+		<div class="contentall_s ele-gas_s">
+			<div class="topbtn">
+				<div class="topsel">
+					<select name="" class="sel_sp">
+						<option value="-1">系统选择</option>
+					</select>
+					<select name="" class="sel_sp">
+						<option value="-1">电负荷增长率</option>
+					</select>
+					<select name="" class="sel_sp">
+						<option value="-1">气负荷增长率</option>
+					</select>
+					<select name="" class="sel_sp">
+						<option value="-1">规划年限</option>
+					</select>
+					<select name="" class="sel_sp">
+						<option value="-1">折现率</option>
+					</select>
+					<select name="" class="sel_sp">
+						<option value="-1">电供应成本</option>
+					</select>
+					<select name="" class="sel_sp">
+						<option value="-1">气供应成本</option>
+					</select>
+				</div>
+				<div class="left_btn">
+					<span class="btnall_s btn_sb">确认</span>
+					<span class="btnall_s btn_qb">系统案例描述</span>
+					<span class="btnall_s btn_sg to_c" title="planning2.html">规划方案计算</span>
+				</div>
+			</div>
+			<!-- 左中右 三部分 -->
+			<div class="msgshow">
+				<!-- 左-->
+				<div class="left_s">
+					<div class="countname_d gas2_s">
+						<h2>电力系统基本信息</h2>
+						<div class="list">
+							<div>
+								<p>电网节点数</p>
+								<span>670</span>
+							</div>
+							<div>
+								<p>已有煤电机组数</p>
+								<span>85</span>
+							</div>
+							<div>
+								<p>已有风电机组数</p>
+								<span>20</span>
+							</div>
+						</div>
+					</div>
+					<div class="sidetabtable">
+						<div class="sidetab_s">
+							<span>已有煤电机组</span>
+							<span>已有输电路线</span>
+						</div>
+						<div class="sidetable_s">
+							<table border="0" cellspacing="" cellpadding="">
+								<thead>
+									<tr>
+										<th>编号</th>
+										<th>
+											<p>投资成本</p><span>(万元/MW)</span>
+										</th>
+										<th>
+											<p>最大出力</p><span>(万元/MW)</span>
+										</th>
+										<th>
+											<p>爬坡率</p><span>(MW/min)</span>
+										</th>
+										<th>
+											<p>成本曲线</p>
+											<p>一次项系数</p>
+										</th>
+									</tr>
+								</thead>
+
+								<body>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+								</body>
+							</table>
+						</div>
+					</div>
+					<div class="countname_d">
+						<h2>天然气系统基本信息</h2>
+						<div class="list">
+							<div>
+								<p>气网节点数</p>
+								<span>670</span>
+							</div>
+							<div>
+								<p>已有压缩机台数</p>
+								<span>85</span>
+							</div>
+							<div>
+								<p>已有气源组数</p>
+								<span>20</span>
+							</div>
+							<div>
+								<p>已有天然气管道</p>
+								<span>897</span>
+							</div>
+						</div>
+					</div>
+					<div class="sidetabtable">
+						<div class="sidetab_s gasside_s">
+							<span>压缩机组</span>
+							<span>天然气管道</span>
+							<span>气源</span>
+						</div>
+						<div class="sidetable_s">
+							<table border="0" cellspacing="" cellpadding="">
+								<thead>
+									<tr>
+										<th>编号</th>
+										<th>
+											<p>最大压缩比</span>
+										</th>
+										<th>
+											<p>耗气量系数</span>
+										</th>
+										<th>
+											<p>建设成本</p><span>(万元)</span>
+										</th>
+									</tr>
+								</thead>
+
+								<body>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+								</body>
+							</table>
+						</div>
+					</div>
+					<div class="gas_line">
+						<div id="left_main" style="height: 200px;width: 470px;"></div>
+						<!--		<div class="sel_s">
+							<select name="">
+								<option value="">夏大</option>
+							</select>
+						</div>-->
+					</div>
+				</div>
+				<!--中-->
+				<div class="center_s">
+					<div class="draw">
+						<div class="drawbtn drawbtn_c">
+							<span class="active">电力系统拓扑</span>
+							<span>天然气系统拓扑</span>
+							<span>电-气耦合系统拓扑</span>
+						</div>
+
+						<!-- 拓扑图 -->
+						<div class="piccontent"></div>
+					</div>
+				</div>
+				<!--右-->
+				<div class="right_s">
+					<div class="countname_d eledj_s">
+						<h2>电力系统待建信息</h2>
+						<div class="list">
+							<div>
+								<p>备选风电场数</p>
+								<span>670</span>
+							</div>
+							<div>
+								<p>备选燃气机组数</p>
+								<span>85</span>
+							</div>
+							<div>
+								<p>备选燃煤机组数</p>
+								<span>20</span>
+							</div>
+							<div>
+								<p>备选输电线数</p>
+								<span>20</span>
+							</div>
+						</div>
+					</div>
+					<div class="sidetabtable">
+						<div class="sidetable_s">
+							<table border="0" cellspacing="" cellpadding="">
+								<thead>
+									<tr>
+										<th>编号</th>
+										<th>
+											额定风速
+										</th>
+										<th>
+											<p>投资成本</p><span>(万元/MW)</span>
+										</th>
+										<th>
+											<p>装机容量</p><span>(MW)</span>
+										</th>
+									</tr>
+								</thead>
+
+								<body>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+								</body>
+							</table>
+						</div>
+						<div class="sidetab_s">
+							<span>待建风电机组</span>
+							<span>待建燃气机组</span>
+						</div>
+					</div>
+					<div class="sidetabtable">
+						<div class="sidetable_s">
+							<table border="0" cellspacing="" cellpadding="">
+								<thead>
+									<tr>
+										<th>编号</th>
+										<th>
+											额定风速
+										</th>
+										<th>
+											<p>投资成本</p><span>(万元/MW)</span>
+										</th>
+										<th>
+											<p>装机容量</p><span>(MW)</span>
+										</th>
+									</tr>
+								</thead>
+
+								<body>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+								</body>
+							</table>
+						</div>
+						<div class="sidetab_s">
+							<span>待建燃煤机组</span>
+							<span>待建输电线路</span>
+						</div>
+					</div>
+					<div class="countname_d rb_s">
+						<h2>天然气系统待建信息</h2>
+						<div class="list">
+							<div>
+								<p>备选P2G数</p>
+								<span>670</span>
+							</div>
+							<div>
+								<p>备选储气罐数</p>
+								<span>85</span>
+							</div>
+						</div>
+						<div>
+							<div class="htab_s">
+								<span>待建P2G数</span><span>待建储气罐</span>
+							</div>
+						</div>
+					</div>
+					<div class="sidetabtable byy">
+						<div class="sidetable_s">
+							<table border="0" cellspacing="" cellpadding="">
+								<thead>
+									<tr>
+										<th>编号</th>
+										<th>
+											额定风速
+										</th>
+										<th>
+											<p>投资成本</p><span>(万元/MW)</span>
+										</th>
+										<th>
+											<p>装机容量</p><span>(MW/min)</span>
+										</th>
+									</tr>
+								</thead>
+
+								<body>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>1#</div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+										<td>
+											<div></div>
+										</td>
+									</tr>
+								</body>
+							</table>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.dn_btn .tabrad_s').on('click', function() {
+					$(this).addClass('active').siblings().removeClass('active')
+				})
+
+				$('.drawbtn_c span').on("click", function() {
+					$(this).toggleClass('active')
+				})
+
+				$('.to_c').on('click', function() {
+					var href = $(this).attr('title');
+
+					parent.$('#iframe_content iframe').attr('src', href);
+				})
+
+				function linel() { //电力负荷预测曲线
+					var xdata = [];
+					var ydata = [];
+					var myChart = echarts.init(document.getElementById('left_main'));
+					option = {
+						title: {
+							text: '负荷分布水平图',
+							left: 'center'
+						},
+						tooltip: {},
+						xAxis: [{
+							type: 'category',
+							data: [1, 2, 3],
+							axisPointer: {
+								type: 'shadow'
+							},
+							axisLabel: {
+								show: true,
+								interval: 0,
+								rotate: 70,
+								textStyle: {
+									color: '#666',
+									fontSize: '14'
+								}
+							},
+						}, ],
+						yAxis: [{
+							name: '单位(MW)',
+							type: 'value',
+							axisLabel: {
+								textStyle: {
+									color: '#666',
+									fontSize: '16'
+								}
+							}
+						}],
+						series: [{
+							type: 'line',
+							symbol: 'circle', //设定为实心点
+							symbolSize: 5, //设定实心点的大小
+							itemStyle: {
+								normal: {
+									color: '#448aff'
+								}
+							},
+
+							data: [1, 2, 3]
+						}],
+						grid: {
+							width: '85%',
+							left: '10%',
+							height: '50%',
+							x: 60,
+							x2: 0
+						}
+					};
+					myChart.setOption(option);
+				}
+				linel()
+				/*end*/
+			})
+		</script>
+	</body>
+
+</html>
